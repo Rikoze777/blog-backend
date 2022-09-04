@@ -2,7 +2,8 @@
 {% load static %}
 
   {% block title %}
-  <title>Remake Barber - Blog Details</title>
+  <title>{{ post.title }} - Blog Details</title>
+  <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
 	{% endblock %}
 
   {% block content %}
