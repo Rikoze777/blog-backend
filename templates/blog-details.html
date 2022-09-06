@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-  {% block title %}
+{% block title %}
   <title>{{ post.title }} - Blog Details</title>
   <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-	{% endblock %}
+{% endblock %}
 
-  {% block content %}
+{% block content %}
   <!--================ Hero sm Banner start =================-->      
   <section class="mb-30px">
     <div class="container">
@@ -33,9 +33,9 @@
           {% if post.slug %}
             <div class="main_blog_details">
                 {% if post.image_url %}
-                <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                  <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
                 {% else %}
-                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                  <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Blog">
                 {% endif %}
                 <h4>{{ post.title }}</h4>
                 <div class="user_details">
@@ -110,4 +110,4 @@
     </div>
   </section>
   <!--================ End Blog Post Area =================-->
-  {% endblock %}
+{% endblock %}
